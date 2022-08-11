@@ -118,7 +118,23 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+            Console.WriteLine("*****");
+
+            if (someJobs.Count == 0)
+            {
+                Console.WriteLine("No results. Try searching again.");
+                Console.WriteLine("*****");
+                return;
+            }
+
+            foreach (Dictionary<string, string> d in someJobs)
+            {
+                foreach (KeyValuePair<string,string> k in d)
+                {
+                    Console.WriteLine($"{k.Key}: {k.Value}");
+                }
+                Console.WriteLine("*****");
+            }
         }
     }
 }

@@ -14,7 +14,9 @@ namespace TechJobsConsole
         {
             LoadData();
 
-            return AllJobs.AsReadOnly();
+            AllJobs.AsReadOnly();
+
+            return AllJobs;
         }
 
         /*
